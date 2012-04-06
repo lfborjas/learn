@@ -17,5 +17,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency("rest-client", "~> 1.6.7")
   gem.add_dependency("thor", "~> 0.14.6")
   gem.add_dependency("json", "~> 1.6.5")
+  gem.add_dependency("term-ansicolor", "~> 1.0.7")
   gem.required_ruby_version = ">= 1.9.2"
 end

@@ -9,10 +9,7 @@ module Learn
                     JSON.dump(student: {email: email}),
                     content_type: :json
                 )
-
-                File.open(Learn::SETTINGS_PATH, 'w') do |f|
-                    f.write(response)
-                end
+                Learn.write_settings(response)
             rescue Exception => e
                 puts "Couldn't register because of #{e}"
             end
