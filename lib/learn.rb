@@ -1,10 +1,10 @@
 require "learn/version"
 require 'learn/student'
-require 'learn/challenge'
+require 'learn/exercise'
 require 'learn/cli'
 
 module Learn
-    HOST = "http://localhost:3000"
+    HOST = "http://aprenderuby.herokuapp.com"
     SETTINGS_PATH = "#{Dir.home}/.learn"
 
     def self.write_settings(settings_hash)

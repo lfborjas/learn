@@ -2,11 +2,11 @@ require 'rest-client'
 require 'json'
 module Learn
     class Student
-        def self.register(email)
+        def self.register(account_number)
             begin
                 response = RestClient.post(
                     "#{Learn::HOST}/students",
-                    JSON.dump(student: {email: email}),
+                    JSON.dump(student: {account_number: account_number}),
                     content_type: :json
                 )
                 Learn.write_settings(response)
